@@ -32,10 +32,6 @@ The application provides two endpoints for URL shortening:
 
 /tinyurl/{id}: This endpoint takes the URL ID and redirects the user to the original long URL.
 
-## Endpoints
-POST /tinyurl
-This endpoint creates a short URL for the provided long URL.
-
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
