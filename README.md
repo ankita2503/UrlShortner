@@ -7,53 +7,35 @@ Setup
 Usage
 Endpoints
 Contributing
-Technologies Used
+
+## Technologies Used
 Spring Boot
+
 Redis
+
 Apache Commons Validator
+
 Lombok
-Setup
+
+## Setup
 Clone the repository.
 Make sure you have Redis installed and running on your system.
 Build and run the application using mvn clean install and java -jar target/URLShortener-0.0.1-SNAPSHOT.jar.
 Usage
 The application provides two endpoints for URL shortening:
 
-POST /tinyurl: This endpoint takes a long URL and generates a short URL. It returns the generated URL ID as a response header.
+### POST 
 
-GET /tinyurl/{id}: This endpoint takes the URL ID and redirects the user to the original long URL.
+/tinyurl: This endpoint takes a long URL and generates a short URL. It returns the generated URL ID as a response header.
 
-Endpoints
+### GET 
+
+/tinyurl/{id}: This endpoint takes the URL ID and redirects the user to the original long URL.
+
+## Endpoints
 POST /tinyurl
 This endpoint creates a short URL for the provided long URL.
 
-Request:
 
-http
-Copy code
-POST /tinyurl
-Content-Type: text/plain
-
-https://example.com/this/is/a/very/long/url/that/i/want/to/shorten
-Response:
-
-http
-Copy code
-HTTP/1.1 204 No Content
-id: AAbc12
-GET /tinyurl/{id}
-This endpoint redirects the user to the original long URL associated with the provided URL ID.
-
-Request:
-
-http
-Copy code
-GET /tinyurl/AAbc12
-Response:
-
-http
-Copy code
-HTTP/1.1 301 Moved Permanently
-Location: https://example.com/this/is/a/very/long/url/that/i/want/to/shorten
-Contributing
+## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
